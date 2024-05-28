@@ -1,0 +1,23 @@
+<form [formGroup]="form">
+    <mat-form-field>
+        <mat-label>TYPE</mat-label>
+        <input matInput placeholder="type" formControlName="type">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>TITLE</mat-label>
+        <input matInput placeholder="titre" formControlName="titre">
+      </mat-form-field> 
+      <mat-form-field>
+        <mat-label>SOURCEPDF</mat-label>
+        <input matInput placeholder="sourcePdf" formControlName="sourcePdf">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>LIEN</mat-label>
+        <input matInput placeholder="lien" formControlName="lien">
+      </mat-form-field>
+      <mat-dialog-actions>
+        <button class="mat-raised-button"(click)="close()">Close</button>
+        <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+    </mat-dialog-actions>
+    </form>
