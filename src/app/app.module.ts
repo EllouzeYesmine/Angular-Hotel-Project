@@ -21,6 +21,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ChambreformComponent } from './chambreform/chambreform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import { ViewComponent } from './view/view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     ReservationComponent,
     DashboardComponent,
-    ChambreformComponent
+    ChambreformComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FirebaseModule,
     MatFormFieldModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatTableModule
     
   ],
   providers: [],

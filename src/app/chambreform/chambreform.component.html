@@ -1,23 +1,83 @@
-<form [formGroup]="form">
-    <mat-form-field>
-        <mat-label>TYPE</mat-label>
-        <input matInput placeholder="type" formControlName="type">
-      </mat-form-field>
+<div  class="dialog-container">
+  <h1 mat-dialog-title>{{ id ? 'Modifier' : 'Ajouter' }} une Chambre</h1>
   
+  <form [formGroup]="form">
+    <label for="nom">Numéro :    </label>
+    <input class="input-min" placeholder="Numero" formControlName="numero"><br>
+    <label for="nom">Type :    </label>
+    <select  formControlName="type" class="input-mint" name="type" id="type"><br>
+      <option value="Chambre Simple">Chambre Simple</option>
+      <option value="Chambre Double">Chambre Double</option>
+      <option value="Chambre Triple">Chambre Triple</option>
+      <option value="Chambre Familiale">Chambre Familiale</option>
+  </select><br>
+  <label for="nom">Prix :    </label>
+    <input class="input-minp" matInput placeholder="Prix" formControlName="prix"><br>
+    <label for="nom">Image :    </label>
+    <input class="input-mini" matInput placeholder="Image" formControlName="image">
+    <label for="nom">Description :</label>
+    <textarea placeholder="Description" class="desc" formControlName="description"></textarea>
+    <div fxLayout="row" fxLayoutAlign="space-between center" >
+    <button class="btnform" (click)="close()">Close</button>
+    <button class="btnform" (click)="save()">Save</button>
+    </div>
+  </form>
+</div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <form [formGroup]="form">
+ 
+
+    <mat-form-field>
+      <mat-label>Numero</mat-label>
+      <input class="input-min" placeholder="numero" formControlName="numero">
+    </mat-form-field>
       <mat-form-field>
-        <mat-label>TITLE</mat-label>
-        <input matInput placeholder="titre" formControlName="titre">
-      </mat-form-field> 
-      <mat-form-field>
-        <mat-label>SOURCEPDF</mat-label>
-        <input matInput placeholder="sourcePdf" formControlName="sourcePdf">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>LIEN</mat-label>
-        <input matInput placeholder="lien" formControlName="lien">
-      </mat-form-field>
-      <mat-dialog-actions>
-        <button class="mat-raised-button"(click)="close()">Close</button>
-        <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
-    </mat-dialog-actions>
-    </form>
+          <mat-label>Type</mat-label>
+          <input class="input-min" matInput placeholder="type" formControlName="type">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>TITLE</mat-label>
+          <input class="input-min" matInput placeholder="titre" formControlName="titre">
+        </mat-form-field> 
+      
+        <mat-form-field>
+          <mat-label>Prix</mat-label>
+          <input class="input-min" matInput placeholder="prix" formControlName="prix">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Image</mat-label>
+          <input class="input-max" matInput placeholder="image" formControlName="image">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <input matInput placeholder="description" formControlName="description">
+        </mat-form-field>
+        <br>
+        <mat-dialog-actions>
+          <button class="mat-raised-button" (click)="close()">Close</button>
+          <button class="mat-raised-button mat-primary">Save</button>
+      </mat-dialog-actions>
+      </form> -->

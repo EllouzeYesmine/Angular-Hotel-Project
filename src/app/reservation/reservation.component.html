@@ -3,19 +3,38 @@
     <div class="jumbotron-left1">
         <form action="" class="jumbotron-form1">
             <table>
-                <label class="hide" for="arrival">arrival date</label>
-                <input type="text" id="arrival" name="arrival_date" placeholder="Arrival Date" onfocus="(this.type='date')" ><br>
-                <label class="hide" for="departure">departure date</label>
-                <input type="text"  id="departure" name="departure_date" placeholder="Departure Date" onfocus="(this.type='date')" ><br>
-                <label class="hide" for="guests">how many guests</label>
-                <input type="text" id="guests" name="guests" placeholder="Guests"><br>
-                <label class="hide" for="children">children</label>
-                <input type="text" id="children" name="children" placeholder="Children"><br>
+                <tr><td><label>Nom : </label></td>
+                <td><input class="input-res" placeholder="Nom" formControlName="nom"></td></tr>
+                <tr>
+                    <td><label>Prénom : </label></td>
+                    <td> <input class="input-res" type="text"  placeholder="Departure Date" onfocus="(this.type='date')" formControlName="nom"></td>
+                </tr>
+                <tr>
+                    <td><label>Numéro de téléphone : </label></td>
+                    <td> <input class="input-res" type="text"  placeholder="Departure Date" onfocus="(this.type='date')" ></td>
+                </tr>
+                <tr>
+                    <td><label  for="departure">Date d'arrivée : </label></td>
+                    <td> <input class="input-res" type="text" name="departure_date" placeholder="Departure Date" onfocus="(this.type='date')" ></td>
+                </tr>
+                <tr>
+                    <td><label  for="departure">Date de départ : </label></td>
+                    <td> <input class="input-res" type="text" name="departure_date" placeholder="Departure Date" onfocus="(this.type='date')" ></td>
+                </tr>
                 
+            </table>
+                
+                
+
+                <input class="input-min" type="text"  placeholder="Arrival Date" onfocus="(this.type='date')" ><br>
+                
+               
+               
+               
                     <tr>
-                        <td><button type="button" class="rates">CHECK RATES</button></td>
+                        <td class="td1"><button type="button" class="rates">CHECK RATES</button></td>
                     </tr>
-                </table>
+                
                 
         </form>
     </div>

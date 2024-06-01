@@ -1,0 +1,26 @@
+<div class="card-container">
+    <mat-card class="viewcard">
+      <ng-container>
+        
+          <img class="imgcard" [src]="data.image" alt="" />
+        
+      </ng-container>
+      <mat-card-content >
+        <strong>Id:</strong> {{ data.id }}
+      </mat-card-content>
+      <mat-card-content>
+        <strong>Numéro : </strong>  {{ data.numero }}
+      </mat-card-content>
+      <mat-card-content>
+        <strong>Type :   </strong>  {{ data.type }}
+      </mat-card-content>
+      <mat-card-content><strong>Prix : </strong>
+         {{ data.prix }} DT
+      </mat-card-content>
+      <mat-card-content><strong>Description : </strong>
+         {{ data.description }} 
+      </mat-card-content>
+      
+    </mat-card>
+    <button class="viewrates" mat-button mat-dialog-close>Close</button>
+  </div>

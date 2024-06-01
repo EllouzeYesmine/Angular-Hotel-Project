@@ -1,5 +1,5 @@
 export interface Chambre{
-    id:number,
+    id:string,
     numero:Int16Array,
     type:string,
     prix:Int16Array,

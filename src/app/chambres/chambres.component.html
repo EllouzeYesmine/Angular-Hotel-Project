@@ -14,8 +14,7 @@
 
             <!-- Top Text -->
             <div class="page-header-container">
-                <br>
-                <br>
+                
                 <h2 class="page-header">Star Hotel Rooms</h2>
                 
                
@@ -25,109 +24,91 @@
 
             <!-- Rooms -->
             <section  class="rooms-section" >
-                <div class="row room-section-header-container">
-                    <div class="col col-3">
-                        <h4 class="room-section-header active-header" id="standard-room">Standard Rooms</h4>
-                    </div>
-                    <div class="col col-3">
-                        <h4 class="room-section-header" id="executive-room">Executive Rooms</h4>
-                    </div>
-                    <div class="col col-3">
-                        <h4 class="room-section-header" id="king-room">King Suites</h4>
-                    </div>
+                
+                <button mat-button color="accent" (click)="openAddDialog()">Create Article</button>
+                <div class="mat-elevation-z8">
+                  <table mat-table [dataSource]="dataSource" matSort>
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="1">
+                      <th mat-header-cell class="column-id" *matHeaderCellDef  mat-sort-header>Id</th>
+                      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="2">
+                      <th mat-header-cell class="column-numero" *matHeaderCellDef  mat-sort-header>Numero</th>
+                      <td mat-cell *matCellDef="let element">{{ element.numero }}</td>
+                    </ng-container>
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="3">
+                      <th mat-header-cell class="column-numero" *matHeaderCellDef  mat-sort-header>Type</th>
+                      <td mat-cell *matCellDef="let element">{{ element.type }}</td>
+                    </ng-container>
+                
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="4">
+                      <th class="column-prix" mat-header-cell *matHeaderCellDef  mat-sort-header>Prix</th>
+                      <td mat-cell  *matCellDef="let element">{{ element.prix }} DT</td>
+                    </ng-container>
+                    <ng-container matColumnDef="5">
+                      <th mat-header-cell *matHeaderCellDef  mat-sort-header>Image</th>
+                      <td mat-cell  *matCellDef="let element">{{ element.image }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="6">
+                      <th mat-header-cell *matHeaderCellDef  mat-sort-header>Description</th>
+                      <td mat-cell  *matCellDef="let element">{{ element.description }}</td>
+                    </ng-container>
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="7">
+                      <th mat-header-cell class="column-action" *matHeaderCellDef  mat-sort-header>Action</th>
+                      <td  *matCellDef="let element">
+                        <button (click)="viewChambre(element)">
+                          <mat-icon>visibility</mat-icon>
+                        </button>
+                        <button (click)="openEditDialog(element)" >
+                          <mat-icon>edit</mat-icon>
+                        </button>
+                        <button (click)="delete(element.id)">
+                          <mat-icon>delete</mat-icon>
+                        </button>
+                        
+                      </td>
+                    </ng-container>
+                
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                  </table>
+                
+                 
                 </div>
-                <!-- <div  class="row">
-                    <div class="col-3" *ngFor="let item of chambres">
-                        <div  >
-                            <img [src]="item.image" alt="" class="rooms-img" >
-                            <h3 class="room-title">{{item.type}}</h3>
-                            <h4>Numéro: {{item.numero}}</h4>
-                            <p class="room-text">{{item.description}}</p>
-                            <div>
-                                <div class="details-container">
-                                    <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                    <p class="list-text">2 Persons</p>
-                                </div>
-                                <div class="details-container">
-                                    <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                    <p class="list-text">1 Kingsize bed</p>
-                                </div>
-                            </div>
-                            <p class="amount-text">Prix: {{item.prix}}</p>
-                            <div class="buttons-container">
-                                <a href="#" class="btn btn-ghost">View More</a>
-                                <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    -->
-                    <!-- <div class="rooms col col-2">
-                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638449/Rectangle_43_d9eepu.png"
-                            alt="" class="rooms-img">
-                        <h3 class="room-title">Standard Economic Single</h3>
-                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
-                        <div>
-                            <div class="details-container">
-                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                <p class="list-text">2 Persons</p>
-                            </div>
-                            <div class="details-container">
-                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
-                                <p class="list-text">1 Kingsize bed</p>
-                            </div>
-                        </div>
-                        <p class="amount-text">NGN35,000 Per Night</p>
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-ghost">View More</a>
-                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
-                        </div>
-                    </div>
-                    <div class="rooms col col-2">
-                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638448/Rectangle_44_anerdv.png"
-                            alt="" class="rooms-img">
-                        <h3 class="room-title">Standard Economic Single</h3>
-                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
-                        <div>
-                            <div class="details-container">
-                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                <p class="list-text">2 Persons</p>
-                            </div>
-                            <div class="details-container">
-                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
-                                <p class="list-text">1 Kingsize bed</p>
-                            </div>
-                        </div>
-                        <p class="amount-text">NGN45,000 Per Night</p>
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-ghost">View More</a>
-                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
-                        </div>
-                    </div>
-                    <div class="rooms col col-2">
-                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638449/Rectangle_45_mtl458.png"
-                            alt="" class="rooms-img">
-                        <h3 class="room-title">Standard Economic Single</h3>
-                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
-                        <div>
-                            <div class="details-container">
-                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                <p class="list-text">2 Persons</p>
-                            </div>
-                            <div class="details-container">
-                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
-                                <p class="list-text">1 Kingsize bed</p>
-                            </div>
-                        </div>
-                        <p class="amount-text">NGN50,000 Per Night</p>
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-ghost">View More</a>
-                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
-                        </div>
-                    </div>
-                </div> -->
-                <button (click)="open()" type="button" class="rates">Ajouter chambre</button>
-                <div class="card-container">
+                  
+                  
+                  
+                  
+                  
+                  
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+               
+
+
+                <!-- <div class="card-container" >
                     <mat-card *ngFor="let item of chambres">
                       <ng-container>
                         
@@ -135,18 +116,18 @@
                         
                       </ng-container>
                       <mat-card-header>
-                        <mat-card-title>{{ item.type }}</mat-card-title>
+                        <mat-card-title>Type: {{ item.type }}</mat-card-title>
                       </mat-card-header>
-                      <mat-card-content>
-                        {{ item.description }}
+                      <mat-card-content>Prix:
+                        {{ item.prix }} DT
                       </mat-card-content>
                       <div class="buttons-container">
-                        <a routerLink="/details/{{item.id}}" class="btn-ghost">View More</a>
-                        <a routerLink="#"  class="btn-fill">Book Now</a>
+                        <a routerLink="#"  class="btn-fill">Edit</a>
+                        <a (click)="delete(item.id)" class="btn-fill">Supprimer</a>
                         
                     </div>
                     </mat-card>
-                  </div>
+                  </div> -->
 
              
             </section> 

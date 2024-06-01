@@ -15,7 +15,7 @@ export class DetailsChambreComponent implements OnInit{
   error:any=[];
   constructor(private route:ActivatedRoute,private CS:ChambreService){}
   ngOnInit() {
-    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
+    const id = this.route.snapshot.paramMap.get('id')!;
     this.CS.getChambreById(id).subscribe(data => {
       this.chambre = data;
     });
