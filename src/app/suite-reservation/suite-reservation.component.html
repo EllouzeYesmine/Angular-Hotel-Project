@@ -1,0 +1,17 @@
+<div class="room-list">
+    <h2>Liste des chambres disponibles</h2>
+    <!-- <button (click)="getAvailableRooms()">Afficher les chambres disponibles</button> -->
+    
+    <div *ngIf="availableRooms.length === 0">
+      <p>Aucune chambre disponible pour le type spécifié.</p>
+    </div>
+  
+    <ul *ngIf="availableRooms.length > 0">
+      <li *ngFor="let room of availableRooms">
+        <h3>{{ room.numero }}</h3>
+        <p>Type: {{ room.type }}</p>
+        <p>Prix: {{ room.prix }} DT</p>
+        <p>Description: {{ room.description }}</p>
+      </li>
+    </ul>
+  </div>

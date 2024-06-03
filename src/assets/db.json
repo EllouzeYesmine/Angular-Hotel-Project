@@ -41,20 +41,182 @@
       "id": "5"
     },
     {
-      "numero": "222",
-      "type": "Chambre Triple",
+      "id": "e2aa",
+      "numero": "500",
+      "type": "Chambre Simple",
+      "prix": "800",
+      "image": "aaaaaaaaaaaa",
+      "description": "aaaaaaaaa"
+    },
+    {
+      "numero": "125",
+      "type": "Simple",
       "prix": "200",
       "image": "https://img.freepik.com/photos-premium/chambre-hotel-lit-bureau-fenetre-vue-ocean_865967-609919.jpg",
       "description": "hhhh",
-      "id": "15b7"
+      "id": "760d"
+    },
+    {
+      "id": "8073",
+      "numero": "210",
+      "type": "Simple",
+      "prix": "200",
+      "image": "https://img.freepik.com/photos-premium/chambre-vue-montagne-lit-vue-montagne_865967-345139.jpg",
+      "description": "ggggg"
+    },
+    {
+      "id": "f4df",
+      "numero": "230",
+      "type": "Triple",
+      "prix": "800",
+      "image": "https://img.freepik.com/photos-premium/chambre-vue-montagne-lit-vue-montagne_865967-345139.jpg",
+      "description": "aaaaaaaaaaaaa"
     }
   ],
   "reservation": [
     {
-      "id": "string",
-      "dateDebut": "01/01/2024",
-      "dateFin": "03/01/2024",
-      "montantTotal": 500
+      "id": "31bf",
+      "nom": "yesmine",
+      "prenom": "ellouze",
+      "numtel": "97358188",
+      "datearrivee": "2024-06-03",
+      "datedepart": "2024-06-06",
+      "type": "Chambre Simple"
+    },
+    {
+      "id": "79f6",
+      "nom": "yessss",
+      "prenom": "yessss",
+      "numtel": "97358188",
+      "datearrivee": "2024-06-03",
+      "datedepart": "2024-06-05",
+      "type": "Chambre Simple"
+    },
+    {
+      "id": "bb11",
+      "nom": "hadir",
+      "prenom": "dammak",
+      "numtel": "22222222",
+      "datearrivee": "2024-06-07",
+      "datedepart": "2024-06-16",
+      "type": "Chambre Simple"
+    },
+    {
+      "id": "c2a6",
+      "nom": "hhhhhhhhhhhh",
+      "prenom": "hhhhhh",
+      "numtel": "9785235",
+      "datearrivee": "2024-06-06",
+      "datedepart": "2024-06-12",
+      "type": "Chambre Simple"
+    },
+    {
+      "id": "fc91",
+      "nom": "llll",
+      "prenom": "mmmmm",
+      "numtel": "52654",
+      "datearrivee": "2024-06-20",
+      "datedepart": "2024-06-23",
+      "type": "Chambre Simple"
+    },
+    {
+      "id": "a043",
+      "nom": "kkkkkk",
+      "prenom": "lllllllllll",
+      "numtel": "kk",
+      "datearrivee": "2024-06-13",
+      "datedepart": "2024-06-15",
+      "type": "Chambre Simple"
+    },
+    {
+      "id": "d896",
+      "nom": "aa",
+      "prenom": "aa",
+      "numtel": "aa",
+      "datearrivee": "2024-06-16",
+      "datedepart": "2024-06-19",
+      "type": "Simple"
+    },
+    {
+      "id": "bb04",
+      "nom": "aa",
+      "prenom": "aa",
+      "numtel": "aa",
+      "datearrivee": "2024-06-14",
+      "datedepart": "2024-06-22",
+      "typechambre": "Double"
+    },
+    {
+      "id": "30da",
+      "nom": "aa",
+      "prenom": "aaaa",
+      "numtel": "aaaaaaaaaa",
+      "datearrivee": "2024-06-09",
+      "datedepart": "2024-06-12",
+      "typechambre": "Triple"
+    },
+    {
+      "id": "1099",
+      "nom": "jjjjjj",
+      "prenom": "jjjjjj",
+      "numtel": "jjjj",
+      "datearrivee": "2024-06-13",
+      "datedepart": "2024-06-15",
+      "typechambre": "Simple"
+    },
+    {
+      "id": "0ac1",
+      "nom": "zzz",
+      "prenom": "zzzz",
+      "numtel": "zzz",
+      "datearrivee": "2024-06-15",
+      "datedepart": "2024-06-23",
+      "typechambre": "Simple"
+    },
+    {
+      "id": "0574",
+      "nom": "aa",
+      "prenom": "aaa",
+      "numtel": "aa",
+      "datearrivee": "2024-06-08",
+      "datedepart": "2024-06-22",
+      "typechambre": "Simple"
+    },
+    {
+      "id": "88e7",
+      "nom": "yesmine",
+      "prenom": "ellouze",
+      "numtel": "aaaaa",
+      "datearrivee": "2024-06-13",
+      "datedepart": "2024-06-22",
+      "typechambre": "Simple"
+    },
+    {
+      "id": "09b8",
+      "nom": "ff",
+      "prenom": "ffff",
+      "numtel": "fffff",
+      "datearrivee": "2024-06-16",
+      "datedepart": "2024-06-23",
+      "typechambre": "Simple"
+    },
+    {
+      "id": "bf9e",
+      "nom": "aaaaaaa",
+      "prenom": "mmmmmmmmmmm",
+      "numtel": "aaa",
+      "datearrivee": "2024-05-28",
+      "datedepart": "2024-06-14",
+      "typechambre": "Simple"
+    },
+    {
+      "id": "4247",
+      "nom": "aaaaaaaaa",
+      "prenom": "aaaaaaa",
+      "numtel": "aaaaaa",
+      "datearrivee": "2024-06-06",
+      "datedepart": "2024-06-23",
+      "typechambre": "Triple"
     }
   ]
 }

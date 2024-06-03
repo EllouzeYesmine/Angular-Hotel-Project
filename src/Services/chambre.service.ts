@@ -12,6 +12,9 @@ export class ChambreService {
   getChambres(){
     return this.http.get<Chambre[]>('http://localhost:3000/chambres')
   }
+  getAllChambres(): Observable<Chambre[]> {
+    return this.http.get<Chambre[]>('/api/chambres');
+  }
   deleteChambre(id:any){
     return this.http.delete('http://localhost:3000/chambres');
   }

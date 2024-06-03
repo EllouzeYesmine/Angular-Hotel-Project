@@ -92,7 +92,7 @@ openAddDialog(): void {
   dialogConfig.data = {
     id: '',
     numero: '',
-    type: '',
+    type: 'Chambre Simple',
     prix: '',
     image: '',
     description: '',

@@ -1,0 +1,8 @@
+<h2>Select Room Type</h2>
+<form (ngSubmit)="onSubmit()">
+  <label *ngFor="let type of roomTypes">
+    <input type="radio" name="roomType" [(ngModel)]="selectedRoomType" [value]="type">
+    {{ type }}
+  </label>
+  <button type="submit">Check Availability</button>
+</form>

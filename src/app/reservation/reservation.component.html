@@ -1,41 +1,65 @@
 <div class="jumbotron-container">
 		
     <div class="jumbotron-left1">
-        <form action="" class="jumbotron-form1">
+        <form class="jumbotron-form1" [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
             <table>
                 <tr><td><label>Nom : </label></td>
                 <td><input class="input-res" placeholder="Nom" formControlName="nom"></td></tr>
                 <tr>
                     <td><label>Prénom : </label></td>
-                    <td> <input class="input-res" type="text"  placeholder="Departure Date" onfocus="(this.type='date')" formControlName="nom"></td>
+                    <td> <input class="input-res" type="text"  placeholder="Prénom" formControlName="prenom"></td>
                 </tr>
                 <tr>
-                    <td><label>Numéro de téléphone : </label></td>
-                    <td> <input class="input-res" type="text"  placeholder="Departure Date" onfocus="(this.type='date')" ></td>
+                    <td><label>Numéro téléphone: </label></td>
+                    <td> <input class="input-res" type="text"  placeholder="Numéro de téléphone" formControlName="numtel"></td>
                 </tr>
                 <tr>
                     <td><label  for="departure">Date d'arrivée : </label></td>
-                    <td> <input class="input-res" type="text" name="departure_date" placeholder="Departure Date" onfocus="(this.type='date')" ></td>
+                    <td> <input class="input-res" type="text" placeholder="Date d'arrivée" onfocus="(this.type='date')" formControlName="datearrivee"></td>
                 </tr>
                 <tr>
                     <td><label  for="departure">Date de départ : </label></td>
-                    <td> <input class="input-res" type="text" name="departure_date" placeholder="Departure Date" onfocus="(this.type='date')" ></td>
+                    <td> <input class="input-res" type="text" placeholder="Date de départ"  onfocus="(this.type='date')" formControlName="datedepart"></td>
+                </tr>
+                <tr *ngIf="typechambre==null">
+                    <td><label for="nom">Type :    </label></td>
+                        <td><select  formControlName="typechambre" class="input-res" id="type"><br>
+                          <option value="Simple" selected>Simple</option>
+                          <option value="Double">Double</option>
+                          <option value="Triple">Triple</option>
+                          <option value="Familiale">Familiale</option>
+                      </select></td>
+                </tr>
+                <tr *ngIf="typechambre!=null">
+                    <td><label for="nom">Type :    </label></td>
+                        <td><input class="input-res" [value]="typechambre" formControlName="type" readonly></td>
                 </tr>
                 
             </table>
                 
                 
 
-                <input class="input-min" type="text"  placeholder="Arrival Date" onfocus="(this.type='date')" ><br>
+                
                 
                
                
                
-                    <tr>
-                        <td class="td1"><button type="button" class="rates">CHECK RATES</button></td>
-                    </tr>
+                    <button type="submit" class="rates-res">CHECK RATES</button>
+                
                 
                 
         </form>
-    </div>
+    </div> 
+
+
+    <!-- <h2>Reservation for {{ roomType }} Room</h2>
+    <ng-container *ngIf="events">
+      <mwl-calendar-month-view
+        [viewDate]="viewDate"
+        [events]="events">
+      </mwl-calendar-month-view>
+    </ng-container> -->
+
+
+
 </div>

@@ -23,6 +23,11 @@ import { ChambreformComponent } from './chambreform/chambreform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { ViewComponent } from './view/view.component';
+import { TypeChambreComponent } from './type-chambre/type-chambre.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { SuiteReservationComponent } from './suite-reservation/suite-reservation.component';
+import { ListChambreComponent } from './list-chambre/list-chambre.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +41,10 @@ import { ViewComponent } from './view/view.component';
     ReservationComponent,
     DashboardComponent,
     ChambreformComponent,
-    ViewComponent
+    ViewComponent,
+    TypeChambreComponent,
+    SuiteReservationComponent,
+    ListChambreComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +60,10 @@ import { ViewComponent } from './view/view.component';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
+    
+    
     
   ],
   providers: [],
