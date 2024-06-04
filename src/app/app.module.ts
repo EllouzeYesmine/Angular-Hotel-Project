@@ -28,6 +28,7 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { SuiteReservationComponent } from './suite-reservation/suite-reservation.component';
 import { ListChambreComponent } from './list-chambre/list-chambre.component';
+import { ConfirmReservationComponent } from './confirm-reservation/confirm-reservation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { ListChambreComponent } from './list-chambre/list-chambre.component';
     ViewComponent,
     TypeChambreComponent,
     SuiteReservationComponent,
-    ListChambreComponent
+    ListChambreComponent,
+    ConfirmReservationComponent
   ],
   imports: [
     BrowserModule,

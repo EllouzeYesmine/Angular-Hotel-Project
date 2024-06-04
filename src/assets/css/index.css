@@ -190,6 +190,9 @@ h2 {
 	padding-bottom: 20px;
 	
 }
+.jumbotron-left2{
+	padding-left: 90px;
+}
  /* .jumbotron-form1 input {
 	outline: none;
 	width: 400px;
@@ -474,6 +477,11 @@ button {
 .rates {
 	border-radius: 5px;
 }
+.ratesa {
+	border-radius: 5px;
+	background-color: #d4af37;
+	color: #fff;
+}
 .rates-res{
 	border-radius: 5px;
 	margin-left: 30%;
@@ -508,8 +516,8 @@ mat-card-content{
 }
 
 .btn-ghost {
-	color: #d4af37;
-	background-color: #fff;
+	color:#fff  ;
+	background-color:  #d4af37;
 }
 
 .btn-ghost:hover,
@@ -554,19 +562,22 @@ mat-card-content{
 	border: 2px solid rgb(53, 48, 48);
 	/* min-height: 40vh;
 	margin-right: 2em; */
-	height: 300px;
-	width: 270px;
+	height: 350px;
+	width: 320px;
 	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 1em 1em 1em 1em;
 	margin: 10px;
-	line-height: 1.5em;
+	line-height: 3em;
 }
 .imagecard{
-	height: 150px;
-	width: 230px;
+	height: 200px;
+	width: 280px;
+}
+.textcard{
+	font-size: 30px;
 }
 
 .card-title {
@@ -892,3 +903,20 @@ mat-card-content{
 		flex-direction: row;
 	}
 }
+.card-containerexp {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: -15px; /* Negative margin to counteract padding of columns */
+  }
+  
+  .cardexp {
+	width: calc(33.33% - 30px); /* 3 cards per row with padding */
+	margin: 15px; /* Adjust margin to space the cards */
+  }
+  .room-list{
+	padding: 100px;
+  }
+  h1{
+	text-align: center;
+  }

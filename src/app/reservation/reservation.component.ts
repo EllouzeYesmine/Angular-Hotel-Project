@@ -3,6 +3,7 @@ import { ReservationService } from 'src/Services/reservation.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-reservation',
   templateUrl: './reservation.component.html',
@@ -17,9 +18,10 @@ export class ReservationComponent implements OnInit{
     private router:Router,
     private route:ActivatedRoute
   ) {}
-
+  idReservation: number = 1;
   ngOnInit(): void {
     this.reservationForm = this.fb.group({
+      id:[Math.ceil(Math.random()*1000)],
       nom: ['', Validators.required],
       prenom: ['', Validators.required],
       numtel: ['', Validators.required],
@@ -33,13 +35,14 @@ export class ReservationComponent implements OnInit{
 
   
   onSubmit(): void {
+    const id=this.reservationForm.value.id;
     const roomType = this.reservationForm.value.typechambre;
     if (this.reservationForm.valid) {
       this.reservationService.createReservation(this.reservationForm.value).subscribe(
         response => {
           console.log('Reservation created successfully', response);
           // this.router.navigate(['/suiteReservation/:type']); 
-          this.router.navigate(['/suiteReservation', roomType]); 
+          this.router.navigate(['/suiteReservation', id,roomType]); 
         },
         error => {
           console.error('Error creating reservation', error);

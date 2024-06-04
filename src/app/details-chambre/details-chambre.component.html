@@ -39,8 +39,10 @@
                     </div>
                     <div class="col">
                         <br>
-                        <h3 class="offers-title">{{chambre.type}}</h3>
-                        <p class="offers-sub-title">
+                        <h2 class="offers-title">Numéro : {{chambre.numero}}</h2>
+                        <h2 class="offers-title">Type : {{chambre.type}}</h2>
+                        <h2 class="offers-title">Prix : {{chambre.type}}</h2>
+                        <p class="offers-sub-title"><strong>Description : </strong>
                             {{chambre.description}}
                         </p>
                         <ul class="offers-list">
@@ -63,7 +65,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="#" class="btn-fill btn-large">View More</a>
+                        <a routerLink="/suiteReservation/{{idReservation}}/{{chambre.type}}" class="btn-fill btn-large">retour</a>
                     </div>
                 </div>
             </section>

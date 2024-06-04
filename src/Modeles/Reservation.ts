@@ -1,9 +1,10 @@
 export interface Reservation{
-    id:string,
+    id:number,
     nom:string,
     prenom:string,
     numtel:string,
-    datearrivee:string,
-    datedepart:string,
+    datearrivee:Date,
+    datedepart:Date,
     typechambre:string,   
+    idChambre:string,
 }

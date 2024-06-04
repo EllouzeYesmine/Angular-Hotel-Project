@@ -1,17 +1,117 @@
 <div class="room-list">
-    <h2>Liste des chambres disponibles</h2>
+    <h1>Liste des chambres disponibles</h1>
+    <br>
+    <br>
+    <br>
     <!-- <button (click)="getAvailableRooms()">Afficher les chambres disponibles</button> -->
     
     <div *ngIf="availableRooms.length === 0">
       <p>Aucune chambre disponible pour le type spécifié.</p>
     </div>
+    <div class="card-container">
+      <mat-card *ngFor="let item of availableRooms" class="card">
+        <ng-container>
+          
+            <img class="imagecard" [src]="item.image" alt="" />
+          
+        </ng-container>
+       
+          <mat-card-title>Numéro: {{ item.numero }}</mat-card-title>
+        <mat-card-title>Type: {{ item.type }}</mat-card-title>
+        <mat-card-title>Prix: {{ item.prix }}</mat-card-title>
+        <div class="buttons-container">
+          <a routerLink="/details/{{idReservation}}/{{item.id}}" class="btn-ghost">View More</a>
+          <a routerLink="/confirmReservation/{{idReservation}}/{{item.id}}"  class="btn-fill">Confirmer</a>
+          
+      </div>
+      </mat-card>
+    </div>
   
-    <ul *ngIf="availableRooms.length > 0">
-      <li *ngFor="let room of availableRooms">
-        <h3>{{ room.numero }}</h3>
-        <p>Type: {{ room.type }}</p>
-        <p>Prix: {{ room.prix }} DT</p>
-        <p>Description: {{ room.description }}</p>
-      </li>
-    </ul>
+  
+  
   </div>
+
+
+    
+  <!-- <div class="container">
+    <div class="row">
+
+
+
+
+      <mat-card class="card" *ngFor="let item of availableRooms">
+        <ng-container>
+          
+          <img class="imagecard" [src]="item.image" alt="" />
+          
+        </ng-container>
+        <mat-card-header>
+          <mat-card-title>Type: {{item.type }}</mat-card-title>
+        </mat-card-header>
+        <div class="buttons-container">
+          <a routerLink="/reservation/{{item.type}}" class="btn-ghost">Reserver</a>
+          
+          
+        </div>
+        </mat-card> -->
+
+
+
+       
+
+
+      <!-- <mat-card *ngFor="let item of availableRooms" class="col-md-4 mb-4" id="card">
+        <ng-container>
+          
+            <img class="imagecard" [src]="item.image" alt="" />
+          
+        </ng-container>
+        
+
+        <br>
+        
+          <mat-card-title>Numéro: {{ item.numero }}</mat-card-title>
+          <mat-card-title>Type: {{ item.type }}</mat-card-title>
+          <mat-card-title>Prix: {{ item.prix }} DT</mat-card-title>
+
+        
+        <div class="buttons-container">
+          
+          <a routerLink="/details/{{item.id}}" class="btn-ghost">View More</a>
+          
+          
+      </div>
+      </mat-card>
+
+
+
+
+
+
+      <div *ngFor="let item of availableRooms" class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            
+            <ng-container>
+						  
+							<img class="imagecard" [src]="item.image" alt="" />
+						  
+						</ng-container>
+						
+            <br>
+        
+            <mat-card-title>Numéro: {{ item.numero }}</mat-card-title>
+            <mat-card-title>Type: {{ item.type }}</mat-card-title>
+            <mat-card-title>Prix: {{ item.prix }} DT</mat-card-title>
+  
+          
+						<div class="buttons-container">
+						  <a routerLink="/reservation/{{item.type}}" class="btn-ghost">Reserver</a>
+						  
+						  
+					  </div>
+          </div>
+        </div>
+      </div> -->
+  
+  
