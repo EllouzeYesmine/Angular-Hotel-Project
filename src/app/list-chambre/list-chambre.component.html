@@ -11,18 +11,11 @@
     
     <main>
         <div class="container">
-
-            <!-- Top Text -->
             <div class="page-header-container">
                 <br>
                 <br>
                 <h2 class="page-header">Star Hotel Rooms</h2>
-                
-               
-            </div>
-
-            
-
+                            </div>
             <!-- Rooms -->
             <section  class="rooms-section" >
                 <div class="row room-section-header-container">
@@ -36,96 +29,6 @@
                         <h4 class="room-section-header" id="king-room">King Suites</h4>
                     </div>
                 </div>
-                <!-- <div  class="row">
-                    <div class="col-3" *ngFor="let item of chambres">
-                        <div  >
-                            <img [src]="item.image" alt="" class="rooms-img" >
-                            <h3 class="room-title">{{item.type}}</h3>
-                            <h4>Numéro: {{item.numero}}</h4>
-                            <p class="room-text">{{item.description}}</p>
-                            <div>
-                                <div class="details-container">
-                                    <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                    <p class="list-text">2 Persons</p>
-                                </div>
-                                <div class="details-container">
-                                    <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                    <p class="list-text">1 Kingsize bed</p>
-                                </div>
-                            </div>
-                            <p class="amount-text">Prix: {{item.prix}}</p>
-                            <div class="buttons-container">
-                                <a href="#" class="btn btn-ghost">View More</a>
-                                <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    -->
-                    <!-- <div class="rooms col col-2">
-                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638449/Rectangle_43_d9eepu.png"
-                            alt="" class="rooms-img">
-                        <h3 class="room-title">Standard Economic Single</h3>
-                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
-                        <div>
-                            <div class="details-container">
-                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                <p class="list-text">2 Persons</p>
-                            </div>
-                            <div class="details-container">
-                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
-                                <p class="list-text">1 Kingsize bed</p>
-                            </div>
-                        </div>
-                        <p class="amount-text">NGN35,000 Per Night</p>
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-ghost">View More</a>
-                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
-                        </div>
-                    </div>
-                    <div class="rooms col col-2">
-                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638448/Rectangle_44_anerdv.png"
-                            alt="" class="rooms-img">
-                        <h3 class="room-title">Standard Economic Single</h3>
-                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
-                        <div>
-                            <div class="details-container">
-                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                <p class="list-text">2 Persons</p>
-                            </div>
-                            <div class="details-container">
-                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
-                                <p class="list-text">1 Kingsize bed</p>
-                            </div>
-                        </div>
-                        <p class="amount-text">NGN45,000 Per Night</p>
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-ghost">View More</a>
-                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
-                        </div>
-                    </div>
-                    <div class="rooms col col-2">
-                        <img src="https://res.cloudinary.com/start-ng/image/upload/v1591638449/Rectangle_45_mtl458.png"
-                            alt="" class="rooms-img">
-                        <h3 class="room-title">Standard Economic Single</h3>
-                        <p class="room-text">Designed specifically for Practicality and <br> comfort</p>
-                        <div>
-                            <div class="details-container">
-                                <img src="assets/img/check-square.svg" alt="tick" class="list-icon">
-                                <p class="list-text">2 Persons</p>
-                            </div>
-                            <div class="details-container">
-                                <img src="assets/img/bed.png" alt="tick" class="list-icon">
-                                <p class="list-text">1 Kingsize bed</p>
-                            </div>
-                        </div>
-                        <p class="amount-text">NGN50,000 Per Night</p>
-                        <div class="buttons-container">
-                            <a href="#" class="btn btn-ghost">View More</a>
-                            <a href="https://timbu.com/search?query=hotel" class="btn btn-fill">Book Now</a>
-                        </div>
-                    </div>
-                </div> -->
                 <button (click)="open()" type="button" class="rates">Ajouter chambre</button>
                 <div class="card-container">
                     <mat-card *ngFor="let item of chambres" class="card">
@@ -147,8 +50,6 @@
                     </div>
                     </mat-card>
                   </div>
-
-             
             </section> 
             <br>
             <br>

@@ -1,0 +1,36 @@
+<div class="modal-content">
+  <h2>Edit Reservation</h2>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <div>
+      <label>Nom</label>
+      <input type="text" formControlName="nom">
+    </div>
+    <div>
+      <label>Prénom</label>
+      <input type="text" formControlName="prenom">
+    </div>
+    <div>
+      <label>Numéro de téléphone</label>
+      <input type="text" formControlName="numtel">
+    </div>
+    <div>
+      <label>Date d'arrivée</label>
+      <input type="date" formControlName="dateArrivee">
+    </div>
+    <div>
+      <label>Date de départ</label>
+      <input type="date" formControlName="dateDepart">
+    </div>
+    <div>
+      <label>Type de chambre</label>
+      <select formControlName="typeChambre">
+        <option value="Simple">Simple</option>
+        <option value="Double">Double</option>
+        <option value="Triple">Triple</option>
+        <option value="Familiale">Familiale</option>
+      </select>
+    </div>
+    <button type="button" (click)="closeEdit()">Cancel</button>
+    <button type="submit">Save</button>
+  </form>
+</div>

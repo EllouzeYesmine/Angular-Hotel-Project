@@ -10,6 +10,7 @@ import { TypeChambreComponent } from './type-chambre/type-chambre.component';
 import { SuiteReservationComponent } from './suite-reservation/suite-reservation.component';
 import { ListChambreComponent } from './list-chambre/list-chambre.component';
 import { ConfirmReservationComponent } from './confirm-reservation/confirm-reservation.component';
+import { ReservationListeComponent } from './reservation-liste/reservation-liste.component';
 
 const routes: Routes = [
   {
@@ -53,7 +54,7 @@ const routes: Routes = [
   component:ListChambreComponent
 },
 {
-  path:'details/:id/:idChambre',
+  path:'details/:id',
   pathMatch:'full',
   component:DetailsChambreComponent
 },
@@ -65,6 +66,10 @@ const routes: Routes = [
 { 
   path: 'suiteReservation/:id/:type', 
   component: SuiteReservationComponent 
+},
+{
+  path:'reservationliste',
+  component:ReservationListeComponent
 }
 
 ];

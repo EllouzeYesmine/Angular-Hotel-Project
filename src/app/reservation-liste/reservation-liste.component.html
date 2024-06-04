@@ -1,0 +1,31 @@
+<div class="table-container">
+    <table class="full-width-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Numéro de téléphone</th>
+          <th>Date d'arrivée</th>
+          <th>Date de départ</th>
+          <th>Type de chambre</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let element of dataSource">
+          <td>{{ element.id }}</td>
+          <td>{{ element.nom }}</td>
+          <td>{{ element.prenom }}</td>
+          <td>{{ element.numtel }}</td>
+          <td>{{ element.dateArrivee }}</td>
+          <td>{{ element.dateDepart  }}</td>
+          <td>{{ element.typeChambre }}</td>
+          <td>
+            <button (click)="editReservation(element)">Edit</button>
+            <button (click)="deleteReservation(element.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

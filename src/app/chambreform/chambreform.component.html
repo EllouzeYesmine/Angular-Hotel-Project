@@ -1,49 +1,27 @@
-<div  class="dialog-container">
+<div class="dialog-container">
   <h1 mat-dialog-title>{{ id ? 'Modifier' : 'Ajouter' }} une Chambre</h1>
-  
   <form [formGroup]="form">
-    <label for="nom">Numéro :    </label>
+    <label for="numero">Numéro :</label>
     <input class="input-min" placeholder="Numero" formControlName="numero"><br>
-    <label for="nom">Type :    </label>
-    <select  formControlName="type" class="input-mint" ><br>
+    <label for="type">Type :</label>
+    <select formControlName="type" class="input-mint">
       <option value="Simple">Simple</option>
       <option value="Double">Double</option>
       <option value="Triple">Triple</option>
       <option value="Familiale">Familiale</option>
-  </select><br>
-  <label for="nom">Prix :    </label>
+    </select><br>
+    <label for="prix">Prix :</label>
     <input class="input-minp" matInput placeholder="Prix" formControlName="prix"><br>
-    <label for="nom">Image :    </label>
-    <input class="input-mini" matInput placeholder="Image" formControlName="image">
-    <label for="nom">Description :</label>
+    <label for="image">Image :</label>
+    <input class="input-mini" matInput placeholder="Image" formControlName="image"><br>
+    <label for="description">Description :</label>
     <textarea placeholder="Description" class="desc" formControlName="description"></textarea>
-    <div fxLayout="row" fxLayoutAlign="space-between center" >
-    <button class="btnform" (click)="close()">Close</button>
-    <button class="btnform" (click)="save()">Save</button>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <button class="btnform" (click)="close()">Close</button>
+      <button class="btnform" (click)="save()">Save</button>
     </div>
   </form>
 </div>
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- <form [formGroup]="form">
  
 

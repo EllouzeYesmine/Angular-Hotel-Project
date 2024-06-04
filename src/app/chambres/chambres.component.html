@@ -1,187 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Star Hotels - Rooms and Suites</title>
-	
-</head>
-<body>
-    
-    <main>
-        <div class="container">
-
-            <!-- Top Text -->
-            <div class="page-header-container">
-                
-                <h2 class="page-header">Star Hotel Rooms</h2>
-                
-               
-            </div>
-
+    <div class="container">
+      <!-- Top Text -->
+      <div class="page-header-container">
+        <h2 class="page-header">Star Hotel Rooms</h2>
+      </div>
+      <!-- Rooms -->
+      <section class="rooms-section">
+        <button mat-button color="accent" (click)="openAddDialog()">Create Article</button>
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort class="full-width-table">
+            <!-- Position Column -->
+            <ng-container matColumnDef="1">
+              <th mat-header-cell class="column-id" *matHeaderCellDef mat-sort-header>Id</th>
+              <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+            </ng-container>
+            <ng-container matColumnDef="2">
+              <th mat-header-cell class="column-numero" *matHeaderCellDef mat-sort-header>Numero</th>
+              <td mat-cell *matCellDef="let element">{{ element.numero }}</td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="3">
+              <th mat-header-cell class="column-numero" *matHeaderCellDef mat-sort-header>Type</th>
+              <td mat-cell *matCellDef="let element">{{ element.type }}</td>
+            </ng-container>
+            <!-- Weight Column -->
+            <ng-container matColumnDef="4">
+              <th class="column-prix" mat-header-cell *matHeaderCellDef mat-sort-header>Prix</th>
+              <td mat-cell *matCellDef="let element">{{ element.prix }} DT</td>
+            </ng-container>
+            <ng-container matColumnDef="5">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
+              <td mat-cell *matCellDef="let element">{{ element.image }}</td>
+            </ng-container>
+            <ng-container matColumnDef="6">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+              <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="7">
+              <th mat-header-cell class="column-action" *matHeaderCellDef mat-sort-header>Action</th>
+              <td mat-cell *matCellDef="let element">
+                <div class="action-buttons">
+                  <button mat-icon-button (click)="viewChambre(element)">
+                    <mat-icon>visibility</mat-icon>
+                  </button>
+                  <button mat-icon-button (click)="openEditDialog(element)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button (click)="delete(element.id)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </td>
+            </ng-container>
+            
             
 
-            <!-- Rooms -->
-            <section  class="rooms-section" >
-                
-                <button mat-button color="accent" (click)="openAddDialog()">Create Article</button>
-                <div class="mat-elevation-z8">
-                  <table mat-table [dataSource]="dataSource" matSort>
-                    <!-- Position Column -->
-                    <ng-container matColumnDef="1">
-                      <th mat-header-cell class="column-id" *matHeaderCellDef  mat-sort-header>Id</th>
-                      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
-                    </ng-container>
-                    <ng-container matColumnDef="2">
-                      <th mat-header-cell class="column-numero" *matHeaderCellDef  mat-sort-header>Numero</th>
-                      <td mat-cell *matCellDef="let element">{{ element.numero }}</td>
-                    </ng-container>
-                    <!-- Name Column -->
-                    <ng-container matColumnDef="3">
-                      <th mat-header-cell class="column-numero" *matHeaderCellDef  mat-sort-header>Type</th>
-                      <td mat-cell *matCellDef="let element">{{ element.type }}</td>
-                    </ng-container>
-                
-                    <!-- Weight Column -->
-                    <ng-container matColumnDef="4">
-                      <th class="column-prix" mat-header-cell *matHeaderCellDef  mat-sort-header>Prix</th>
-                      <td mat-cell  *matCellDef="let element">{{ element.prix }} DT</td>
-                    </ng-container>
-                    <ng-container matColumnDef="5">
-                      <th mat-header-cell *matHeaderCellDef  mat-sort-header>Image</th>
-                      <td mat-cell  *matCellDef="let element">{{ element.image }}</td>
-                    </ng-container>
-                    <ng-container matColumnDef="6">
-                      <th mat-header-cell *matHeaderCellDef  mat-sort-header>Description</th>
-                      <td mat-cell  *matCellDef="let element">{{ element.description }}</td>
-                    </ng-container>
-                    <!-- Symbol Column -->
-                    <ng-container matColumnDef="7">
-                      <th mat-header-cell class="column-action" *matHeaderCellDef  mat-sort-header>Action</th>
-                      <td  *matCellDef="let element">
-                        <button (click)="viewChambre(element)">
-                          <mat-icon>visibility</mat-icon>
-                        </button>
-                        <button (click)="openEditDialog(element)" >
-                          <mat-icon>edit</mat-icon>
-                        </button>
-                        <button (click)="delete(element.id)">
-                          <mat-icon>delete</mat-icon>
-                        </button>
-                        
-                      </td>
-                    </ng-container>
-                
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-                  </table>
-                
-                 
-                </div>
-                  
-                  
-                  
-                  
-                  
-                  
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
-
-               
-
-
-                <!-- <div class="card-container" >
-                    <mat-card *ngFor="let item of chambres">
-                      <ng-container>
-                        
-                          <img [src]="item.image" alt="" />
-                        
-                      </ng-container>
-                      <mat-card-header>
-                        <mat-card-title>Type: {{ item.type }}</mat-card-title>
-                      </mat-card-header>
-                      <mat-card-content>Prix:
-                        {{ item.prix }} DT
-                      </mat-card-content>
-                      <div class="buttons-container">
-                        <a routerLink="#"  class="btn-fill">Edit</a>
-                        <a (click)="delete(item.id)" class="btn-fill">Supprimer</a>
-                        
-                    </div>
-                    </mat-card>
-                  </div> -->
-
-             
-            </section> 
-            <br>
-            <br>
-            <br>
-
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
         </div>
-    </main>
-
-    <footer class="footer">
-		<div class="footer-container">
-			<nav class="footer-nav">
-				<div class="footer-description">
-					<h3 class="footer-description-title">Star Hotels</h3>
-					<p>Hospitality and Comfort are our watchwords</p>
-				</div>
-				<div class="footer-contact-us">
-					<h3 class="footer-description-title">Contact Us</h3>
-					<p class="footer-description-detail"> 
-						<img src="./assets/img/map-pin.svg" class="footer-description-icon" alt="star hotel location">
-
-						<span>23, Fola Osibo, Lekki Phase 1</span></p>
-					<p class="footer-description-detail">
-						<img src="./assets/img/phone.svg" class="footer-description-icon" alt="star hotels phone number"> 
-						<span>
-					 08185956620</span></p>
-					<p class="footer-description-detail">
-						<img src="./assets/img/mail.svg" class="footer-description-icon" alt="star hotels email">
-						<span>support@starhotels.com</span> </p>
-				</div>
-				<div class="footer-follow-us">
-					<h3 class="footer-description-title">Follow Us</h3>
-					<ul class="footer-follow-us-lists">
-						<li class="follow-us-list">
-							<a href="">
-								<img src="./assets/img/facebook.svg" alt="star hotels facebook page">
-							</a>
-						</li>
-						<li class="follow-us-list">
-							<a href="">
-								<img src="./assets/img/twitter.svg" alt="star hotels twitter page">
-							</a>
-						</li>
-						<li class="follow-us-list">
-							<a href="">
-								<img src="./assets/img/instagram.svg" alt="star hotels instagram page">
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</footer>
-</body>
-
-</html>
+      </section>
+      <br>
+      <br>
+      <br>
+    </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <nav class="footer-nav">
+        <div class="footer-description">
+          <h3 class="footer-description-title">Star Hotels</h3>
+          <p>Hospitality and Comfort are our watchwords</p>
+        </div>
+        <div class="footer-contact-us">
+          <h3 class="footer-description-title">Contact Us</h3>
+          <p class="footer-description-detail">
+            <img src="./assets/img/map-pin.svg" class="footer-description-icon" alt="star hotel location">
+            <span>23, Fola Osibo, Lekki Phase 1</span>
+          </p>
+          <p class="footer-description-detail">
+            <img src="./assets/img/phone.svg" class="footer-description-icon" alt="star hotels phone number">
+            <span>08185956620</span>
+          </p>
+          <p class="footer-description-detail">
+            <img src="./assets/img/mail.svg" class="footer-description-icon" alt="star hotels email">
+            <span>support@starhotels.com</span>
+          </p>
+        </div>
+        <div class="footer-follow-us">
+          <h3 class="footer-description-title">Follow Us</h3>
+          <ul class="footer-follow-us-lists">
+            <li class="follow-us-list">
+              <a href="">
+                <img src="./assets/img/facebook.svg" alt="star hotels facebook page">
+              </a>
+            </li>
+            <li class="follow-us-list">
+              <a href="">
+                <img src="./assets/img/twitter.svg" alt="star hotels twitter page">
+              </a>
+            </li>
+            <li class="follow-us-list">
+              <a href="">
+                <img src="./assets/img/instagram.svg" alt="star hotels instagram page">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </footer>

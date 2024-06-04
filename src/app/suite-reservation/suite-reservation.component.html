@@ -1,35 +1,30 @@
 <div class="room-list">
-    <h1>Liste des chambres disponibles</h1>
-    <br>
-    <br>
-    <br>
-    <!-- <button (click)="getAvailableRooms()">Afficher les chambres disponibles</button> -->
-    
-    <div *ngIf="availableRooms.length === 0">
-      <p>Aucune chambre disponible pour le type spécifié.</p>
-    </div>
-    <div class="card-container">
-      <mat-card *ngFor="let item of availableRooms" class="card">
-        <ng-container>
-          
-            <img class="imagecard" [src]="item.image" alt="" />
-          
-        </ng-container>
-       
-          <mat-card-title>Numéro: {{ item.numero }}</mat-card-title>
-        <mat-card-title>Type: {{ item.type }}</mat-card-title>
-        <mat-card-title>Prix: {{ item.prix }}</mat-card-title>
-        <div class="buttons-container">
-          <a routerLink="/details/{{idReservation}}/{{item.id}}" class="btn-ghost">View More</a>
-          <a routerLink="/confirmReservation/{{idReservation}}/{{item.id}}"  class="btn-fill">Confirmer</a>
-          
-      </div>
-      </mat-card>
-    </div>
-  
-  
-  
+  <h1>Liste des chambres disponibles</h1>
+  <br>
+  <br>
+  <br>
+  <div *ngIf="availableRooms.length === 0">
+    <p>Aucune chambre disponible pour le type spécifié.</p>
   </div>
+  <div class="card-container">
+    <mat-card *ngFor="let item of availableRooms" class="card">
+      <ng-container>
+        <img class="imagecard" [src]="item.image" alt="" />
+      </ng-container>
+      <mat-card-title>Numéro: {{ item.numero }}</mat-card-title>
+      <mat-card-title>Type: {{ item.type }}</mat-card-title>
+      <mat-card-title>Prix: {{ item.prix }}</mat-card-title>
+      <div class="buttons-container">
+        <a routerLink="/details/{{reservationId}}/{{item.id}}" class="btn-ghost">View More</a>
+        <a routerLink="/confirmReservation/{{reservationId}}/{{item.id}}" class="btn-fill">Confirmer</a>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+  
+  
+
 
 
     
